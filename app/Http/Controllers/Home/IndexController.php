@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Reception;
+namespace App\Http\Controllers\Home;
 
 use Illuminate\Http\Request;
 
@@ -16,8 +16,8 @@ class IndexController extends Controller
      */
     public function index()
     {
-        // 加载前台模板
-        return view('reception.index.index');
+        // 加载模板
+        return view('home.index.index');
     }
 
     /**

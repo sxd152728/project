@@ -26,19 +26,16 @@
       <li><a href="/jstt/" target="_blank" title="技术探讨">技术探讨</a></li>
       <li><a href="/news/s/" target="_blank" title="慢生活">慢生活</a></li>
     </ul>
-    <div class="search">
-      <form class="searchform" method="get" action="#">
-        <input type="text" name="s" value="Search" onfocus="this.value=''" onblur="this.value='Search'">
-      </form>
-    </div>
+    <a href="">登录</a>
+    <a href="">注册</a>
     <script src="/r/js/silder.js"></script><!--获取当前页导航 高亮显示标题--> 
   </nav>
 </header>
 <!--header end-->
 <div id="mainbody">
   <div class="info">
-    <figure> <img src="/r/images/11.jpg"  alt="Panama Hat">
-    </figure>
+    <!-- 广告开始 -->
+    <!-- 广告结束 -->
     <div class="card">
       <h1>我的名片</h1>
       <p>网名：DanceSmile | 即步非烟</p>
@@ -60,6 +57,11 @@
 
 
     <aside>
+      <div class="search">
+        <form class="searchform" method="get" action="#">
+          <input type="text" name="s" value="Search" onfocus="this.value=''" onblur="this.value='Search'">
+        </form>
+      </div>
       <div class="viny">
         <dl>
           <dt class="art"><img src="/r/images/artwork.png" alt="专辑"></dt>
@@ -86,20 +88,6 @@
           <li><span><strong>8</strong></span><a href="/">时间煮雨-个人网站模板</a></li>
           <li><span><strong>9</strong></span><a href="/">花气袭人是酒香―个人网站模板</a></li>
         </ol>
-      </div>
-      <div class="toppic">
-        <h2>图文并茂</h2>
-        <ul>
-          <li><a href="/"><img src="/r/images/k01.jpg">腐女不可怕，就怕腐女会画画！
-            <p>伤不起</p>
-            </a></li>
-          <li><a href="/"><img src="/r/images/k02.jpg">问前任，你还爱我吗？无限戳中泪点~
-            <p>感兴趣</p>
-            </a></li>
-          <li><a href="/"><img src="/r/images/k03.jpg">世上所谓幸福，就是一个笨蛋遇到一个傻瓜。
-            <p>喜欢</p>
-            </a></li>
-        </ul>
       </div>
       <div class="clicks">
         <h2>热门点击</h2>

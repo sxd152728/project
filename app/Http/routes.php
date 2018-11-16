@@ -44,4 +44,4 @@ Route::get('/admin/login','Admin\LoginController@index');
 Route::post('/admin/login/verification','Admin\LoginController@verification');
 
 //前台路由
-Route::get('/','Reception\IndexController@index');
+Route::get('/','Home\IndexController@index');
