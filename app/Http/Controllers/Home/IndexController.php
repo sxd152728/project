@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Models\Friend;
+use App\Models\Notice;
+use App\Models\Avdert;
 
 class IndexController extends Controller
 {
@@ -15,9 +18,13 @@ class IndexController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        // 加载模板
-        return view('home.index.index');
+    {   
+
+        $avdert = Avdert::all();
+        $avdert1 = Avdert::first();
+        $friend = Friend::all();
+        $notice = Notice::first();
+        return view('home.index.index',['friend'=>$friend,'notice'=>$notice,'avdert'=>$avdert,'avdert1'=>$avdert1]);
     }
 
     /**

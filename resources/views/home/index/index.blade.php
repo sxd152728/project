@@ -3,12 +3,14 @@
 <head>
 <meta charset="gb2312">
 <title>Pornhub</title>
+
 <link href="/r/css/styles.css" rel="stylesheet">
 <link href="/r/css/animation.css" rel="stylesheet">
 <!-- 返回顶部调用 begin -->
 <link href="/r/css/lrtk.css" rel="stylesheet" />
 <script type="text/javascript" src="/r/js/jquery.js"></script>
 <script type="text/javascript" src="/r/js/js.js"></script>
+
 <!-- 返回顶部调用 end-->
 <!--[if lt IE 9]>
 <script src="js/modernizr.js"></script>
@@ -35,13 +37,17 @@
 <div id="mainbody">
   <div class="info">
     <!-- 广告开始 -->
+    <figure> 
+      <a href="{{$avdert1->pic}}">
+        <img src="{{$avdert1->pic}}"  alt="Panama Hat">
+      </a>
+    </figure>
     <!-- 广告结束 -->
     <div class="card">
       <h1>我的名片</h1>
-      <p>网名：DanceSmile | 即步非烟</p>
-      <p>职业：Web前端设计师、网页设计</p>
-      <p>电话：13662012345</p>
-      <p>Email：dancesmiling@qq.com</p>
+      <p>网名：{{$notice->name}}</p>
+      <p>电话：{{$notice->phone}}</p>
+      <p>Email：{{$notice->email}}</p>
       <ul class="linkmore">
         <li><a href="/" class="talk" title="给我留言"></a></li>
         <li><a href="/" class="address" title="联系地址"></a></li>
@@ -112,9 +118,12 @@
   <div class="footer-mid">
     <div class="links">
       <h2>友情链接</h2>
-      <ul>
-        <li><a href="/">杨青个人博客</a></li>
-        <li><a href="http://www.3dst.com">3DST技术服务中心</a></li>
+      <ul style="float: left;">
+        <div>
+        @foreach($friend as $k=>$v)
+        <li style="float: left;"> <img style="width:10px;height:10px;" src="{{$v->pic}}" alt=""><a href="{{ $v->url}}">{{$v->name}}</a></li><span style="width:10px;height:10px;float: left;"></span>
+        @endforeach
+        </div>
       </ul>
     </div>
   </div>
