@@ -45,6 +45,9 @@ Route::post('/admin/login/verification','Admin\LoginController@verification');
 
 //前台路由
 Route::get('/','Home\IndexController@index');
+Route::get('/home/list/{id}','Home\ListController@index');
+Route::get('/home/xiangqing/{id}','Home\XiangqingController@index');
+
 //前台首页
 $wzkgs = Wzkgs::find(1);
 if($wzkgs['kg'] == 1){

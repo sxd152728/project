@@ -20,7 +20,7 @@
     <ul>
       <li><a href="/" >网站首页</a></li>
      @foreach($cate as $k=>$v)
-     <li><a href="/" target="_blank" title="{{$v->cname}}"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{{$v->cname}}</font></font></a></li>
+     <li><a href="/home/list/{{$v->id}}" target="_blank" title="{{$v->cname}}"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{{$v->cname}}</font></font></a></li>
      @endforeach
     </ul>
     <div class="search">
