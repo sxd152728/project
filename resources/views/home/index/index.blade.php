@@ -19,12 +19,9 @@
   <nav id="nav">
     <ul>
       <li><a href="/" >网站首页</a></li>
-      <li><a href="/download/" target="_blank" title="个人博客模板">个人博客模板</a></li>
-      <li><a href="/book/" target="_blank" title="图书推荐">图书推荐</a></li>
-      <li><a href="/web/" target="_blank" title="网站建设">网站建设</a></li>
-      <li><a href="/newshtml5/" target="_blank" title="HTML5 / CSS3">HTML5 / CSS3</a></li>
-      <li><a href="/jstt/" target="_blank" title="技术探讨">技术探讨</a></li>
-      <li><a href="/news/s/" target="_blank" title="慢生活">慢生活</a></li>
+     @foreach($cate as $k=>$v)
+     <li><a href="/" target="_blank" title="{{$v->cname}}"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{{$v->cname}}</font></font></a></li>
+     @endforeach
     </ul>
     <div class="search">
       <form class="searchform" method="get" action="#">
@@ -56,9 +53,43 @@
   </div>
   <!--info end-->
   <div class="blank"></div>
-  <div class="blogs">
+  
 
 
+
+    <div class="blogs">
+    <ul class="bloglist">
+      @foreach($articles as $k=>$v)
+      <li>
+        <div class="arrow_box">
+          <div class="ti"></div>
+          <!--三角形-->
+          <div class="ci"></div>
+          <!--圆形-->
+          <h2 class="title"><a href="/" target="_blank">{{$v->title}}</a></h2>
+          <ul class="textinfo">
+            
+            <p>
+            <?php 
+               $a = $v['content'];
+               $a = ltrim($a,'<p>');
+               $a = rtrim($a,'</p>');
+               echo $a;
+
+
+             ?>
+            </p>
+          </ul>
+          <ul class="details">
+            
+            <li class="icon-time"><a href="#">{{$v->create_at}}</a></li>
+          </ul>
+        </div>
+        <!--arrow_box end--> 
+      </li>
+      @endforeach
+     </ul>
+ 
     <aside>
       <div class="viny">
         <dl>
@@ -76,15 +107,18 @@
       <div class="tuijian">
         <h2>推荐文章</h2>
         <ol>
-          <li><span><strong>1</strong></span><a href="/">有一种思念，是淡淡的幸福,一个心情一行文字</a></li>
-          <li><span><strong>2</strong></span><a href="/">励志人生-要做一个潇洒的女人</a></li>
-          <li><span><strong>3</strong></span><a href="/">女孩都有浪漫的小情怀――浪漫的求婚词</a></li>
-          <li><span><strong>4</strong></span><a href="/">Green绿色小清新的夏天-个人博客模板</a></li>
-          <li><span><strong>5</strong></span><a href="/">女生清新个人博客网站模板</a></li>
-          <li><span><strong>6</strong></span><a href="/">Wedding-婚礼主题、情人节网站模板</a></li>
-          <li><span><strong>7</strong></span><a href="/">Column 三栏布局 个人网站模板</a></li>
-          <li><span><strong>8</strong></span><a href="/">时间煮雨-个人网站模板</a></li>
-          <li><span><strong>9</strong></span><a href="/">花气袭人是酒香―个人网站模板</a></li>
+          <?php 
+              $a=0;
+
+           ?>
+          @foreach($articles as $k=>$v)
+          <li><span><strong>
+            <?php 
+                $a++;
+                echo $a;
+             ?>
+          </strong></span><a href="/">{{$v->title}}</a></li>
+         @endforeach
         </ol>
       </div>
       <div class="toppic">

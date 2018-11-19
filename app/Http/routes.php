@@ -44,4 +44,11 @@ Route::get('/admin/login','Admin\LoginController@index');
 Route::post('/admin/login/verification','Admin\LoginController@verification');
 
 //前台路由
-Route::get('/','Reception\IndexController@index');
+Route::get('/','Home\IndexController@index');
+//前台首页
+$wzkgs = Wzkgs::find(1);
+if($wzkgs['kg'] == 1){
+	Route::get('/','home\IndexController@index');
+}else{
+	Route::get('/','home\IndexController@modify');
+}

@@ -1,12 +1,13 @@
 <?php
 
-namespace App\Http\Controllers\Reception;
+namespace App\Http\Controllers\Home;
 
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
+use App\Models\Cates;
+use App\Models\Articles;
 class IndexController extends Controller
 {
     /**
@@ -16,8 +17,11 @@ class IndexController extends Controller
      */
     public function index()
     {
-        // 加载前台模板
-        return view('reception.index.index');
+        $cate = Cates::all();
+        // $articles = Articles::all();
+        $articles = Articles::where('id', '>', '0')->orderBy('id')->take(5)-> get();
+        
+        return view('home.index.index',['cate'=>$cate,'articles'=>$articles]);
     }
 
     /**
@@ -84,5 +88,9 @@ class IndexController extends Controller
     public function destroy($id)
     {
         //
+    }
+    public function modify()
+    {
+        return view('home.modify.modify');
     }
 }

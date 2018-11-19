@@ -274,23 +274,7 @@
                 </li>
               </ul>
               <!-- 评论管理结束 -->
-              <!-- 网站管理开始 -->
-              <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-                <li class="nav-item has-treeview menu-open">
-                  <a href="admin/article" class="nav-link active">
-                    <i class="nav-icon fa fa-edit"></i>
-                    <p>网站管理
-                      <i class="fa fa-angle-left right"></i></p>
-                  </a>
-                  <ul class="nav nav-treeview">
-                    <li class="nav-item">
-                      <a href="/admin/wzkg/create" class="nav-link ">
-                        <i class="fa fa-circle-o nav-icon"></i>
-                        <p>网站设置</p>
-                      </a>
-                  </ul>
-                  </li>
-                  <!-- 网站管理结束 -->
+
                   <!-- 友情链接开始 -->
                   <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                     <li class="nav-item has-treeview menu-open">
@@ -359,6 +343,24 @@
               </li>
           </ul>
           <!-- 回收站管理结束 -->
+          <!-- 网站管理开始 -->
+              <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                <li class="nav-item has-treeview menu-open">
+                  <a href="admin/article" class="nav-link active">
+                    <i class="nav-icon fa fa-edit"></i>
+                    <p>网站管理
+                      <i class="fa fa-angle-left right"></i></p>
+                  </a>
+                  <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                      <a href="/admin/wzkg/create" class="nav-link ">
+                        <i class="fa fa-circle-o nav-icon"></i>
+                        <p>网站设置</p>
+                      </a>
+                  </ul>
+                  </li>
+                </ul>
+                  <!-- 网站管理结束 -->
           <!-- 分区结束 --></div>
         <!-- 左侧导航条结束 --></aside>
       <!-- 内容开始 -->
